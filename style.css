@@ -16,21 +16,18 @@ textarea {
 	min-height: 10em;
 }
 
-.typed {
-	color: #00f;
-	font-weight: bold;
-}
-
-.not_typed {
-	color: #888;
-}
-
 .overlay_container {
 	position: relative;
+}
+
+#type_progress {
+	color: #888;
 }
 
 #type_box {
 	position: absolute;
 	top: 0;
 	background-color: rgba(0, 0, 0, 0);
+	color: #00f;
+	font-weight: bold;
 }

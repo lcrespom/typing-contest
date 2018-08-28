@@ -1,7 +1,8 @@
 /*
 TODO:
-- Add separete input text box again
-- Show type_progress box under the type_box and make type_box transparent
+- Flash error counter when error
+- Afer #input_text changes, set #type_box height to same as #type_progress
+- Center in page
 */
 (function($){
 
@@ -19,7 +20,7 @@ function handleInputText() {
 		updateStatErrors()
 		$('#type_box').html('')
 		inputText = $(this).val()
-		decorateInput(0)
+		$('#type_progress').text(inputText)
 	})
 }
 
@@ -45,7 +46,6 @@ function checkTyping(text) {
 		pos--
 		//TODO paint error in type_box
 	}
-	decorateInput(pos + 1)
 	updateStatSpeed(pos)
 }
 
@@ -60,12 +60,6 @@ function setCursorToEnd(target) {
 	target.focus();
 	range.detach(); // optimization
 	target.scrollTop = target.scrollHeight; // set scroll to the end if multiline
-}
-
-function decorateInput(len) {
-	let typed = '<span class="typed">' + inputText.substring(0, len) + '</span>'
-	let rest = '<span class="not_typed">' + inputText.substring(len) + '</span>'
-	$('#type_progress').html(typed + rest)
 }
 
 function updateStatTime() {
