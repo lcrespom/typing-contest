@@ -2,7 +2,6 @@
 TODO:
 - Flash error counter when error
 - Afer #input_text changes, set #type_box height to same as #type_progress
-- Center in page
 */
 (function($){
 
