@@ -13,7 +13,7 @@ textarea {
 	width: 90%;
 	border: 1px solid #a9a9a9;
 	padding: 2px;
-	min-height: 2em;
+	min-height: 10em;
 }
 
 .typed {
@@ -23,4 +23,14 @@ textarea {
 
 .not_typed {
 	color: #888;
+}
+
+.overlay_container {
+	position: relative;
+}
+
+#type_box {
+	position: absolute;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0);
 }

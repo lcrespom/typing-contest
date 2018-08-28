@@ -19,6 +19,7 @@ function handleInputText() {
 		updateStatErrors()
 		$('#type_box').html('')
 		inputText = $(this).val()
+		decorateInput(0)
 	})
 }
 
