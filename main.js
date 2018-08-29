@@ -1,6 +1,6 @@
 /*
 TODO:
-- Flash error counter when error
+- Flash #type_box
 - Afer #input_text changes, set #type_box height to same as #type_progress
 */
 (function($){
@@ -66,12 +66,19 @@ function updateStatTime() {
 }
 function updateStatErrors() {
 	$('#stat_errors').text(errorct)
+	if (errorct > 0)
+		flashClass($('.errors_row'), 100, 'flashing')
 }
 
 function updateStatSpeed(len) {
 	let elapsedMins = (Date.now() - startTime) / (60 * 1000)
 	let kpm = len / elapsedMins
 	$('#stat_speed').text(Math.round(kpm))
+}
+
+function flashClass($elem, delay, cls) {
+	$elem.addClass(cls)
+	setTimeout(_ => $elem.removeClass(cls), delay)
 }
 
 function startTimer() {
