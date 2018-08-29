@@ -35,16 +35,17 @@ textarea {
 	position: absolute;
 	top: 0;
 	background-color: rgba(0, 0, 0, 0);
-	color: #00f;
 	font-weight: bold;
+	color: #00f;
+	transition: color 3s;
 }
 
-.errors_row {
+#errors_row {
 	color: black;
 	transition: color 3s;
 }
 
 .flashing {
-	color: red;
-	transition: color 0.1s;
+	color: red !important;
+	transition: color 0.1s !important;
 }

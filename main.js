@@ -1,6 +1,5 @@
 /*
 TODO:
-- Flash #type_box
 - Afer #input_text changes, set #type_box height to same as #type_progress
 */
 (function($){
@@ -66,8 +65,10 @@ function updateStatTime() {
 }
 function updateStatErrors() {
 	$('#stat_errors').text(errorct)
-	if (errorct > 0)
-		flashClass($('.errors_row'), 100, 'flashing')
+	if (errorct > 0) {
+		flashClass($('#errors_row'), 500, 'flashing')
+		flashClass($('#type_box'), 500, 'flashing')
+	}
 }
 
 function updateStatSpeed(len) {
