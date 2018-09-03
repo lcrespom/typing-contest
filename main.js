@@ -35,7 +35,7 @@ function handleTypeBox() {
 function checkTyping(text) {
 	pos = text.length - 1
 	let ch = text[pos]
-	if (ch != inputText[pos]) {
+	if (ch != inputText[pos] && ch != '´') {
 		errorct++
 		updateStatErrors()
 		let tbox = $('#type_box').get(0)
